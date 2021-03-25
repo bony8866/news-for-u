@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Editor } from "@tinymce/tinymce-react";
-
+import './AddBlog.modules.css';
 class AddBlog extends Component {
     constructor(props) {
         super(props);
@@ -27,7 +27,6 @@ class AddBlog extends Component {
         return (
             <div className="container-fluid main-content-div">
                 <form>
-                    <h1>Add new Blog</h1>
                     <div className="form-group row field-container">
                         <label className="col-sm-1 col-form-label">Heading</label>
                         <div className="col-sm-4">
