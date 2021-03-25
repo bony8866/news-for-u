@@ -1,0 +1,52 @@
+.footerst {
+    height: 10rem;
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+}
+
+.footercont {
+    display: flex;
+    padding: 2rem;
+}
+
+.socialmedia {
+    position: absolute;
+    right: 47px;
+}
+
+a {
+    color: grey;
+}
+
+li {
+    padding-top: 2px;
+    padding-left: 15px;
+    list-style-type: none;
+}
+
+.socailmediaicons {
+    overflow: hidden;
+    display: inline-flex;
+}
+
+@media(max-width: 560px) {
+
+    .links {
+        padding: 0%;
+    }
+
+    .socailmediaicons {
+        display: block;
+    }
+    
+    li {
+        padding-top: 2px;
+        list-style-type: none;
+    }
+
+}
+
+img {
+    width: 1.5rem;
+}
