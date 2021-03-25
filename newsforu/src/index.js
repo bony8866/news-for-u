@@ -3,9 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
+import Header from './header/Header';
+import Footer from './footer/Footer';
+
 ReactDOM.render(
   <React.StrictMode>
-    //component goes here
+    <Header />
+    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );
