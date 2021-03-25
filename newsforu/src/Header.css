@@ -1,0 +1,11 @@
+.leftmenu {
+    position: relative;
+    flex-flow: row-reverse;
+}
+.fontsize {
+    font-size: 16px;
+}
+
+.navele {
+   margin-left: 1rem; 
+}
