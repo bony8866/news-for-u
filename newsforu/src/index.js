@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-
+import AddBlog from './admin-user-components/AddBlog'
 ReactDOM.render(
   <React.StrictMode>
-    //component goes here
+    <AddBlog/>
   </React.StrictMode>,
   document.getElementById('root')
 );
