@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Editor } from "@tinymce/tinymce-react";
 import './AddBlog.modules.css';
+
 class AddBlog extends Component {
     constructor(props) {
         super(props);
@@ -8,8 +9,8 @@ class AddBlog extends Component {
             heading: '',
             image: '',
             body: '',
-            category: '',
-           
+            category: 'Uncategorized',
+            date: new Date().toLocaleString(),
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleBodyChange = this.handleBodyChange.bind(this)
@@ -18,15 +19,18 @@ class AddBlog extends Component {
     }
     handleChange(event) {
         this.setState({ [event.target.name]: event.target.value })
-      }
+    }
     handleBodyChange(body) {
-        this.setState({body});
-      }
+        this.setState({ body });
+    }
+    handleFormSubmit = e => {
+    
+    }
     render() {
-        const { heading, image, body, category} = this.state;
+        const { heading, image, body, category, date } = this.state;
         return (
             <div className="container-fluid main-content-div">
-                <form>
+                <form onSubmit={this.handleFormSubmit}>
                     <div className="form-group row field-container">
                         <label className="col-sm-1 col-form-label">Heading</label>
                         <div className="col-sm-4">
@@ -42,7 +46,7 @@ class AddBlog extends Component {
                     <div className="form-group row field-container">
                         <label className="col-sm-1 col-form-label">Body</label>
                         <div className="col-sm">
-                            <Editor
+                            <Editor name="body"
                                 value={body}
                                 init={{
                                     height: 400,
@@ -55,14 +59,20 @@ class AddBlog extends Component {
                     <div className="form-group row field-container">
                         <label className="col-sm-1 col-form-label">Category</label>
                         <div className="col-sm">
-                            <select 
-                               value={category}
-                                onChange={this.handleChange} >
+                            <select name="category" value={category} onChange={this.handleChange}>
+                                <option value="Uncategorized">Uncategorized</option>
                                 <option value="Sports">Sports</option>
                                 <option value="Politics">Politics</option>
-                                <option value="Uncategorized">Movies </option>
-                                <option value="Uncategorized">Uncategorized </option>
+                                <option value="Gaming">Gaming</option>
+                                <option value="Stocks">Stocks</option>
+
                             </select>
+                        </div>
+                    </div>
+                    <div className="form-group row field-container">
+                        <label className="col-sm-1 col-form-label">Publish Date</label>
+                        <div className="col-sm">
+                            <p>{date}</p>
                         </div>
                     </div>
                     <div className="form-group row">
