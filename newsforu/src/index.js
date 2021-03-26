@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-
+import AddBlog from './admin-user-components/AddBlog'
 import Header from './header/Header';
 import Footer from './footer/Footer';
 
 ReactDOM.render(
   <React.StrictMode>
     <Header />
+    <AddBlog/>
     <Footer />
   </React.StrictMode>,
   document.getElementById('root')
